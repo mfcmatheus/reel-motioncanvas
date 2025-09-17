@@ -1,0 +1,102 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "showDescription",
+      "targetTime": 2.523054054054053
+    },
+    {
+      "name": "practical",
+      "targetTime": 6.419370370370369
+    },
+    {
+      "name": "showPdf",
+      "targetTime": 9.23167267267267
+    },
+    {
+      "name": "readpdfCode",
+      "targetTime": 12.765261817372927
+    },
+    {
+      "name": "highlightOOP",
+      "targetTime": 16.300965942828306
+    },
+    {
+      "name": "back",
+      "targetTime": 19.779275987063166
+    },
+    {
+      "name": "hidePractical",
+      "targetTime": 20.779275987063166
+    },
+    {
+      "name": "showArquivo",
+      "targetTime": 21.843940088072515
+    },
+    {
+      "name": "focusLer",
+      "targetTime": 23.716355534636364
+    },
+    {
+      "name": "tipoDeArquivo",
+      "targetTime": 28.622689984342514
+    },
+    {
+      "name": "hideArquivo",
+      "targetTime": 32.90211020099754
+    },
+    {
+      "name": "highlightConstructor",
+      "targetTime": 38.073461552348896
+    },
+    {
+      "name": "lerImpl",
+      "targetTime": 40.16578587667322
+    },
+    {
+      "name": "lerImplPdf",
+      "targetTime": 43.047623714511055
+    },
+    {
+      "name": "lerImplTxt",
+      "targetTime": 46.79800209288943
+    },
+    {
+      "name": "normal",
+      "targetTime": 50.69313722802457
+    },
+    {
+      "name": "hideAll",
+      "targetTime": 52.851191282078624
+    },
+    {
+      "name": "instantiate",
+      "targetTime": 56.891083173970515
+    },
+    {
+      "name": "lerBbox",
+      "targetTime": 58.904380471267814
+    },
+    {
+      "name": "hideAllNodes",
+      "targetTime": 68.18023632712367
+    },
+    {
+      "name": "adv1",
+      "targetTime": 70.18023632712367
+    },
+    {
+      "name": "adv2",
+      "targetTime": 72.25122731811466
+    },
+    {
+      "name": "adv3",
+      "targetTime": 75.99564173252908
+    },
+    {
+      "name": "adv4",
+      "targetTime": 79.67311921000656
+    }
+  ],
+  "seed": 48447982
+}
