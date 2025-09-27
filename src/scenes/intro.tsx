@@ -1,4 +1,5 @@
 import {
+  CODE,
   Code,
   Gradient,
   is,
@@ -21,7 +22,154 @@ import Pdf from "../../images/pdf.png";
 import TxtImg from "../../images/txt.png";
 
 export default makeScene2D(function* (view) {
-  const gradient = new Gradient({
+  const code = createRef<Code>();
+  const title = createRef<Txt>();
+  const subtitle = createRef<Txt>();
+  const emoji = createRef<Txt>();
+
+  const CFirst = CODE`\
+    async function checkout(data: Checkout) {
+      if (data.total) {
+        if (data.total <= 0) {
+          console.error("Invalid total")
+        } else {
+          // Check card validity
+          if (data.card) {
+            await pay({
+              total: data.total,
+              card: data.card
+            });
+          } else {
+            console.error("No card provided")
+          }
+        }
+      } else {
+        console.error("No total provided")
+      }
+    }
+  `
+
+  const CSecond = CODE`\
+    async function checkout(data: Checkout) {
+      if (!data.total) {
+        console.error("No total provided")
+        return
+      }
+
+      if (data.total <= 0) {
+        console.error("Invalid total")
+        return
+      }
+
+      if (!data.card) {
+        console.error("No card provided")
+        return
+      }
+
+      /* Proceed to payment */
+      await pay({
+        total: data.total,
+        card: data.card
+      });
+    }
+  `;
+
+  view.add(
+    <>
+      <Txt
+        fontSize={100}
+        fontWeight={800}
+        fill={"#ddd"}
+        y={-900}
+        opacity={0}
+        ref={title}
+      >
+      </Txt>
+      <Code
+        fontSize={40}
+        fill={"#ddd"}
+        fontFamily={"Fira Code"}
+        top={0}
+        left={-35}
+        opacity={0}
+        ref={code}
+        code={CFirst}
+      />
+      <Txt
+        fontSize={80}
+        fontWeight={800}
+        fill={"#ddd"}
+        y={600}
+        opacity={0}
+        ref={subtitle}
+      >
+        Easy to read?
+      </Txt>
+      <Txt
+        fontSize={80}
+        y={-630}
+        x={400}
+        rotation={-45}
+        opacity={0}
+        ref={emoji}
+      >
+        👈🏻
+      </Txt>
+    </>
+  );
+
+  yield* all(
+    code().opacity(1, 1),
+    subtitle().opacity(1, 1)
+  )
+
+  yield* waitUntil("changeCode");
+
+  yield* all(
+    subtitle().y(650, .5),
+    code().code(CSecond, .75).wait(1),
+  )
+
+  yield* subtitle().text("Same function", 0.5)
+
+  yield* waitUntil("readable");
+  
+  yield* all(
+    title().opacity(1, 0.5),
+    title().text("Readable", 0.5),
+  )
+  
+  yield* waitUntil("selectFirstLine");
+
+  yield* all(
+    code().selection(lines(0), 0.5),
+    emoji().opacity(1, 0.5),
+  )
+  yield* waitUntil("selectFrom0");
+
+  yield* all(
+    code().selection(lines(1,4), 0.5),
+    emoji().y(-600, 0.5),
+    emoji().x(-150, 0.5),
+  )
+  yield* waitUntil("selectFrom1To4");
+
+  yield* all(
+    code().selection(lines(6,9), 0.5),
+    emoji().y(-360, 0.5),
+    emoji().x(-120, 0.5),
+  )
+  yield* waitUntil("selectFrom6To9");
+
+  yield* all(
+    code().selection(lines(11,14), 0.5),
+    emoji().y(-120, 0.5),
+    emoji().x(-200, 0.5),
+  )
+
+  yield* waitUntil("end");
+
+  /*const gradient = new Gradient({
     type: "linear",
     from: new Vector2(-200, 0), // gradient start (vector)
     to: new Vector2(200, 0), // gradient end (vector)
@@ -482,5 +630,5 @@ pdf.ler(); // -> Lendo arquivo PDF: meu_pdf.pdf
 
   yield* advRefs[3].opacity(1, 1);
 
-  yield* waitFor(13);
+  yield* waitFor(13);*/
 });
