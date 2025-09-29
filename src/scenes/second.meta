@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "timeEvents": [
+    {
+      "name": "startAnimation",
+      "targetTime": 2.461357637273361
+    },
+    {
+      "name": "showSubtitle",
+      "targetTime": 5.821111605895693
+    },
+    {
+      "name": "changeColors",
+      "targetTime": 7.321111605895693
+    },
+    {
+      "name": "accomplish",
+      "targetTime": 11.510266928203807
+    },
+    {
+      "name": "colorChange",
+      "targetTime": 14.043999911665976
+    },
+    {
+      "name": "functionExecution",
+      "targetTime": 17.51552723745574
+    },
+    {
+      "name": "end",
+      "targetTime": 20.51552723745574
+    }
+  ],
+  "seed": 2550053239
+}

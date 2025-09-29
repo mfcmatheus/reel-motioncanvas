@@ -3,31 +3,31 @@
   "timeEvents": [
     {
       "name": "changeCode",
-      "targetTime": 1.7989157806689122
+      "targetTime": 2.5889849195752594
     },
     {
       "name": "readable",
-      "targetTime": 4.610197993113915
+      "targetTime": 5.558280959801532
     },
     {
       "name": "selectFirstLine",
-      "targetTime": 6.92205636311182
+      "targetTime": 7.870139329799437
     },
     {
       "name": "selectFrom0",
-      "targetTime": 10.11093128454488
+      "targetTime": 10.87086440287324
     },
     {
       "name": "selectFrom1To4",
-      "targetTime": 11.4744074841733
+      "targetTime": 12.234340602501659
     },
     {
       "name": "selectFrom6To9",
-      "targetTime": 13.057635628712227
+      "targetTime": 13.817568747040585
     },
     {
       "name": "end",
-      "targetTime": 15.530587548067585
+      "targetTime": 16.309719569315774
     }
   ],
   "seed": 48447982

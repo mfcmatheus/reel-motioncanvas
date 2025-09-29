@@ -2,12 +2,12 @@ import { makeProject } from "@motion-canvas/core";
 
 
 import intro from "./scenes/intro?scene";
+import second from "./scenes/second?scene";
 import audio from "../audio/audio.mp3";
 import { Code, LezerHighlighter } from "@motion-canvas/2d";
 import { parser } from "@lezer/javascript";
 import { HighlightStyle } from "@codemirror/language";
 import { tags as t } from "@lezer/highlight";
-import second from "./scenes/second";
 
 
 const myTheme = HighlightStyle.define([
