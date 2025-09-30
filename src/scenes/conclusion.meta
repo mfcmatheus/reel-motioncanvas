@@ -1,0 +1,26 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "handEnter",
+      "targetTime": 0.6
+    },
+    {
+      "name": "press",
+      "targetTime": 1
+    },
+    {
+      "name": "shareTap",
+      "targetTime": 2.15
+    },
+    {
+      "name": "flyAway",
+      "targetTime": 2.9
+    },
+    {
+      "name": "end",
+      "targetTime": 5.685805623537702
+    }
+  ],
+  "seed": 1398822556
+}

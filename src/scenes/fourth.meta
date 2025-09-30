@@ -40,6 +40,10 @@
     {
       "name": "startSelections",
       "targetTime": 24.09980303436162
+    },
+    {
+      "name": "end",
+      "targetTime": 28.59980303436162
     }
   ],
   "seed": 2295195160

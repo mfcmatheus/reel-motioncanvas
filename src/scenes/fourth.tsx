@@ -97,6 +97,7 @@ export default makeScene2D(function* (view) {
   `
 
   const code = createRef<Code>();
+  const title = createRef<Txt>();
 
   view.add(
     <Txt
@@ -104,6 +105,7 @@ export default makeScene2D(function* (view) {
       fontWeight={700}
       fill={"#fff"}
       y={-700}
+      ref={title}
     >
       How to do it?
     </Txt>
@@ -182,4 +184,10 @@ export default makeScene2D(function* (view) {
   yield* code().selection(lines(11,14), 0.5).wait(0.5);
   yield* code().selection(DEFAULT, 0.5);
 
+  yield* waitUntil("end");
+
+  yield* all(
+    code().opacity(0, 0.5),
+    title().opacity(0, 0.5),
+  )
 });
