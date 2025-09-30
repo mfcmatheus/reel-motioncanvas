@@ -1,0 +1,46 @@
+{
+  "version": 0,
+  "timeEvents": [
+    {
+      "name": "selectFirstBlock",
+      "targetTime": 1.0176048907530695
+    },
+    {
+      "name": "changeFirstBlock",
+      "targetTime": 2.8575664600766673
+    },
+    {
+      "name": "deselectFirstBlock",
+      "targetTime": 5.781938115775681
+    },
+    {
+      "name": "selectSecondBlock",
+      "targetTime": 7.638733952526772
+    },
+    {
+      "name": "changeSecondBlock",
+      "targetTime": 9.638733952526772
+    },
+    {
+      "name": "selectThirdBlock",
+      "targetTime": 12.528901077817215
+    },
+    {
+      "name": "changeThirdBlock",
+      "targetTime": 15.192908670022527
+    },
+    {
+      "name": "deselectThirdBlock",
+      "targetTime": 19.484875775212046
+    },
+    {
+      "name": "selectLastBlock",
+      "targetTime": 21.37205688243027
+    },
+    {
+      "name": "startSelections",
+      "targetTime": 24.09980303436162
+    }
+  ],
+  "seed": 2295195160
+}

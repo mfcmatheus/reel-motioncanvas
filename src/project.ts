@@ -3,6 +3,9 @@ import { makeProject } from "@motion-canvas/core";
 
 import intro from "./scenes/intro?scene";
 import second from "./scenes/second?scene";
+import third from "./scenes/third?scene";
+import fourth from "./scenes/fourth?scene";
+
 import audio from "../audio/audio.mp3";
 import { Code, LezerHighlighter } from "@motion-canvas/2d";
 import { parser } from "@lezer/javascript";
@@ -28,6 +31,6 @@ Code.defaultHighlighter = new LezerHighlighter(
 );
 
 export default makeProject({
-  scenes: [intro, second],
+  scenes: [intro, second, third, fourth],
   audio
 });

@@ -80,7 +80,7 @@ export default makeScene2D(function* (view) {
         fontSize={100}
         fontWeight={800}
         fill={"#ddd"}
-        y={-800}
+        y={-700}
         opacity={0}
         ref={title}
       >

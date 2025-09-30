@@ -1,5 +1,5 @@
 import { makeScene2D, Rect, Txt } from "@motion-canvas/2d";
-import { all, createRef, waitFor, waitUntil } from "@motion-canvas/core";
+import { all, createRef, waitUntil } from "@motion-canvas/core";
 
 export default makeScene2D(function* (view) {
   const heading = createRef<Txt>();
@@ -14,10 +14,10 @@ export default makeScene2D(function* (view) {
 
   view.add(
     <Txt
-      fontSize={60}
+      fontSize={50}
       fontWeight={100}
       fill={"#ddd"}
-      y={-900}
+      y={-800}
       opacity={0}
       ref={heading}
     >
@@ -27,10 +27,10 @@ export default makeScene2D(function* (view) {
 
   view.add(
     <Txt
-      fontSize={120}
+      fontSize={100}
       fontWeight={700}
       fill={"#fff"}
-      y={-800}
+      y={-700}
       ref={title}
     >
     </Txt>
@@ -215,5 +215,13 @@ export default makeScene2D(function* (view) {
   yield* block5().fill("#cfcfcf", 0.5).back(1)
   yield* block5().fill("#cfcfcf", 0.5).back(1)
 
-  yield* waitUntil("end");
+  yield* all(
+    heading().opacity(0, 0.75),
+    subtitle().opacity(0, 0.75),
+    block1().opacity(0, 0.75),
+    block2().opacity(0, 0.75),
+    block3().opacity(0, 0.75),
+    block4().opacity(0, 0.75),
+    block5().opacity(0, 0.75),
+  )
 })
