@@ -33,7 +33,7 @@ export default makeScene2D(function* (view) {
         width={460}
         height={125}
         radius={15}
-        fill={"#0095F6"}
+        fill={"#515ef5"}
         lineWidth={0}
         opacity={0}
         y={0}

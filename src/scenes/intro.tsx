@@ -1,25 +1,16 @@
 import {
   CODE,
   Code,
-  Gradient,
-  is,
-  Layout,
   lines,
   makeScene2D,
-  Rect,
   Txt,
+  Img,
 } from "@motion-canvas/2d";
 import {
   all,
   createRef,
-  makeRef,
-  Vector2,
-  waitFor,
   waitUntil,
 } from "@motion-canvas/core";
-import { File } from "../components/File";
-import Pdf from "../../images/pdf.png";
-import TxtImg from "../../images/txt.png";
 
 export default makeScene2D(function* (view) {
   const code = createRef<Code>();
@@ -76,6 +67,12 @@ export default makeScene2D(function* (view) {
 
   view.add(
     <>
+      <Img
+        src={"../../images/Background.png"}
+        width={1080}
+        height={1920}
+        zIndex={-10}
+      />
       <Txt
         fontSize={100}
         fontWeight={800}

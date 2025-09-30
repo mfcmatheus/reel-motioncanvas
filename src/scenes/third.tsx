@@ -1,10 +1,19 @@
-import { makeScene2D, Txt } from "@motion-canvas/2d";
+import { Img, makeScene2D, Txt } from "@motion-canvas/2d";
 import { all, createRef, waitUntil } from "@motion-canvas/core";
 
 export default makeScene2D(function* (view) {
   const title = createRef<Txt>();
   const subtitle = createRef<Txt>();
   const brain = createRef<Txt>();
+
+  view.add(
+    <Img
+      src={"../../images/Background.png"}
+      width={1080}
+      height={1920}
+      zIndex={-10}
+    />
+  )
 
   view.add(
     <Txt

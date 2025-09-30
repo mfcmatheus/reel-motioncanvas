@@ -1,4 +1,4 @@
-import { makeScene2D, Rect, Txt } from "@motion-canvas/2d";
+import { Img, makeScene2D, Rect, Txt } from "@motion-canvas/2d";
 import { all, createRef, waitUntil } from "@motion-canvas/core";
 
 export default makeScene2D(function* (view) {
@@ -11,6 +11,15 @@ export default makeScene2D(function* (view) {
   const block3 = createRef<Rect>();
   const block4 = createRef<Rect>();
   const block5 = createRef<Rect>();
+
+  view.add(
+    <Img
+      src={"../../images/Background.png"}
+      width={1080}
+      height={1920}
+      zIndex={-10}
+    />
+  )
 
   view.add(
     <Txt
