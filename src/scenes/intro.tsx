@@ -74,29 +74,28 @@ export default makeScene2D(function* (view) {
         zIndex={-10}
       />
       <Txt
-        fontSize={100}
+        fontSize={76}
         fontWeight={800}
         fill={"#ddd"}
-        y={-700}
+        y={-550}
         opacity={0}
         ref={title}
       >
       </Txt>
       <Code
-        fontSize={40}
+        fontSize={28}
         fill={"#ddd"}
         fontFamily={"Fira Code"}
-        top={0}
-        left={-35}
         opacity={0}
+        middle={[-30, 0]}
         ref={code}
         code={CFirst}
       />
       <Txt
-        fontSize={80}
+        fontSize={76}
         fontWeight={800}
         fill={"#ddd"}
-        y={600}
+        y={500}
         opacity={0}
         ref={subtitle}
       >
@@ -104,8 +103,8 @@ export default makeScene2D(function* (view) {
       </Txt>
       <Txt
         fontSize={80}
-        y={-630}
-        x={400}
+        y={-425}
+        x={100}
         rotation={-45}
         opacity={0}
         ref={emoji}
@@ -123,10 +122,10 @@ export default makeScene2D(function* (view) {
   yield* waitUntil("changeCode");
 
   yield* all(
-    subtitle().y(650, .5),
+    subtitle().y(550, .5),
     code().code(CSecond, .75).wait(1),
   )
-
+ 
   yield* subtitle().text("Same function", 0.5)
 
   yield* waitUntil("readable");
@@ -146,22 +145,22 @@ export default makeScene2D(function* (view) {
 
   yield* all(
     code().selection(lines(1,4), 0.5),
-    emoji().y(-600, 0.5),
-    emoji().x(-150, 0.5),
+    emoji().y(-370, 0.5),
+    emoji().x(85, 0.5),
   )
   yield* waitUntil("selectFrom1To4");
 
   yield* all(
     code().selection(lines(6,9), 0.5),
-    emoji().y(-360, 0.5),
-    emoji().x(-120, 0.5),
+    emoji().y(-200, 0.5),
+    emoji().x(150, 0.5),
   )
   yield* waitUntil("selectFrom6To9");
 
   yield* all(
     code().selection(lines(11,14), 0.5),
-    emoji().y(-120, 0.5),
-    emoji().x(-200, 0.5),
+    emoji().y(-25, 0.5),
+    emoji().x(65, 0.5),
   )
 
   yield* waitUntil("end");

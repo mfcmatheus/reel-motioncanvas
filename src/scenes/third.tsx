@@ -17,10 +17,10 @@ export default makeScene2D(function* (view) {
 
   view.add(
     <Txt
-      fontSize={100}
+      fontSize={76}
       fontWeight={700}
       fill={"#fff"}
-      y={-700}
+      y={-550}
       ref={title}
     >
       Return Early
@@ -29,7 +29,7 @@ export default makeScene2D(function* (view) {
 
   view.add(
     <Txt
-      fontSize={60}
+      fontSize={48}
       fontWeight={100}
       fill={"#fff"}
       y={-200}

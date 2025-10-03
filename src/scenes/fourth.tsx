@@ -110,10 +110,10 @@ export default makeScene2D(function* (view) {
 
   view.add(
     <Txt
-      fontSize={100}
+      fontSize={76}
       fontWeight={700}
       fill={"#fff"}
-      y={-700}
+      y={-550}
       ref={title}
     >
       How to do it?
@@ -122,12 +122,11 @@ export default makeScene2D(function* (view) {
 
   view.add(
     <Code
-      fontSize={40}
+      fontSize={28}
       fill={"#ddd"}
       fontFamily={"Fira Code"}
-      top={0}
-      left={-35}
       opacity={0}
+      middle={[-30, 0]}
       ref={code}
       code={CFirst}
     />

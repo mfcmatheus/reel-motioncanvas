@@ -23,10 +23,10 @@ export default makeScene2D(function* (view) {
 
   view.add(
     <Txt
-      fontSize={50}
+      fontSize={36}
       fontWeight={100}
       fill={"#ddd"}
-      y={-800}
+      y={-625}
       opacity={0}
       ref={heading}
     >
@@ -36,10 +36,10 @@ export default makeScene2D(function* (view) {
 
   view.add(
     <Txt
-      fontSize={100}
+      fontSize={76}
       fontWeight={700}
       fill={"#fff"}
-      y={-700}
+      y={-550}
       ref={title}
     >
     </Txt>
@@ -47,17 +47,17 @@ export default makeScene2D(function* (view) {
 
   view.add(
     <Txt
-      fontSize={60}
+      fontSize={48}
       fontWeight={100}
       fill={"#fff"}
-      y={-450}
+      y={-300}
       ref={subtitle}
     ></Txt>
   )
 
   view.add(
     <Rect
-      y={-300}
+      y={-200}
       x={-200}
       width={0}
       opacity={0}
@@ -71,7 +71,7 @@ export default makeScene2D(function* (view) {
 
   view.add(
     <Rect
-      y={-200}
+      y={-100}
       x={0}
       width={0}
       opacity={0}
@@ -85,7 +85,7 @@ export default makeScene2D(function* (view) {
 
   view.add(
     <Rect
-      y={-100}
+      y={0}
       x={-100}
       width={0}
       opacity={0}
@@ -99,7 +99,7 @@ export default makeScene2D(function* (view) {
 
   view.add(
     <Rect
-      y={0}
+      y={100}
       x={-50}
       width={0}
       opacity={0}
@@ -113,7 +113,7 @@ export default makeScene2D(function* (view) {
 
   view.add(
     <Rect
-      y={100}
+      y={200}
       x={-150}
       width={0}
       opacity={0}
